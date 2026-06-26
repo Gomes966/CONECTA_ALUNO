@@ -1,0 +1,55 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ servico.titulo }}</title>
+
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+
+    <header>
+        <h1>{{ servico.titulo }}</h1>
+        <p>Detalhes do serviço</p>
+    </header>
+
+    <main>
+
+        <div class="card">
+
+            <h2>{{ servico.titulo }}</h2>
+
+            <p class="categoria">
+                {{ servico.categoria }}
+            </p>
+
+            <p>
+                {{ servico.descricao }}
+            </p>
+
+            <p class="contato">
+                <strong>Contato:</strong>
+                {{ servico.contato }}
+            </p>
+
+            <a href="#" class="botao">
+                Tenho Interesse
+            </a>
+
+            <p>
+                <strong>Publicado em:</strong>
+                {{ servico.data_criacao }}
+            </p>
+
+            <br>
+
+            <a href="/">← Voltar para a página inicial</a>
+
+        </div>
+
+    </main>
+
+</body>
+</html>

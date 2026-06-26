@@ -1,0 +1,75 @@
+{% extends 'base.html' %}
+
+{% block titulo %}
+Início - Conecta Aluno
+{% endblock %}
+
+{% block conteudo %}
+
+<h2>Serviços Disponíveis</h2>
+
+<p>
+    <strong>
+        {{ total_servicos }} serviço(s) encontrado(s)
+    </strong>
+</p>
+
+<form method="GET">
+
+    <input
+        type="text"
+        name="q"
+        placeholder="Pesquisar serviço..."
+    >
+
+    <button type="submit">
+        Buscar
+    </button>
+
+</form>
+
+<br>
+
+<p><strong>Categorias:</strong></p>
+
+<a href="/" class="botao">Todas</a>
+<a href="/?categoria=Engenharia" class="botao">Engenharia</a>
+<a href="/?categoria=Tecnologia" class="botao">Tecnologia</a>
+<a href="/?categoria=Acadêmico" class="botao">Acadêmico</a>
+<a href="/?categoria=Pesquisa" class="botao">Pesquisa</a>
+<a href="/?categoria=Design" class="botao">Design</a>
+<a href="/?categoria=Idiomas" class="botao">Idiomas</a>
+
+<br><br>
+
+{% for servico in servicos %}
+
+<div class="card">
+
+    <h3>{{ servico.titulo }}</h3>
+
+    <p class="categoria">
+        {{ servico.categoria }}
+    </p>
+
+    <p>
+        {{ servico.descricao }}
+    </p>
+
+    <p class="contato">
+        Contato: {{ servico.contato }}
+    </p>
+
+    <a href="/servico/{{ servico.id }}/" class="botao">
+        Ver detalhes
+    </a>
+
+</div>
+
+{% empty %}
+
+<p>Nenhum serviço encontrado.</p>
+
+{% endfor %}
+
+{% endblock %}

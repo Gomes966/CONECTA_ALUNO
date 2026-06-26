@@ -1,0 +1,134 @@
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(
+    to bottom,
+    #f8fafc,
+    #eef2ff
+);
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background: linear-gradient(135deg, #1e3a8a, #2563eb);
+    color: white;
+    text-align: center;
+    padding: 35px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.15);
+}
+
+main {
+    width: 90%;
+    max-width: 1000px;
+    margin: 30px auto;
+}
+
+.card {
+    background-color: white;
+    border-radius: 12px;
+    padding: 25px;
+    margin-bottom: 20px;
+
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-3px);
+}
+
+.categoria {
+    color: #2563eb;
+    font-weight: bold;
+}
+
+.contato {
+    margin-top: 10px;
+    color: #555;
+}
+
+.botao {
+    display: inline-block;
+    background-color: #2563eb;
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.botao:hover {
+    background-color: #1d4ed8;
+}
+
+form {
+    margin-bottom: 20px;
+}
+
+input[type="text"] {
+    padding: 12px;
+    width: 400px;
+    max-width: 100%;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+}
+}
+
+button {
+    padding: 10px 15px;
+    border: none;
+    background-color: #2563eb;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #1d4ed8;
+}
+
+nav {
+    margin-top: 20px;
+}
+
+.menu-link {
+    display: inline-block;
+    color: white;
+    text-decoration: none;
+    margin: 0 8px;
+    padding: 8px 14px;
+    border-radius: 6px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+nav {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.menu-link:hover {
+    background-color: rgba(255,255,255,0.2);
+}
+
+footer {
+    background-color: #1e3a8a;
+    color: white;
+    text-align: center;
+    padding: 25px;
+    margin-top: 40px;
+}
+
+footer p {
+    margin: 5px;
+}
+.usuario-logado {
+    color: #ffffff;
+    font-weight: bold;
+    padding: 8px 12px;
+}

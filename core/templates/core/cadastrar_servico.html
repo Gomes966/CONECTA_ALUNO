@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block titulo %}
+Cadastrar Serviço
+{% endblock %}
+
+{% block conteudo %}
+
+<div class="card">
+
+    <h2>Cadastrar Serviço</h2>
+
+    <form method="POST">
+
+        {% csrf_token %}
+
+        {{ form.as_p }}
+
+        <button type="submit">
+            Publicar Serviço
+        </button>
+
+    </form>
+
+</div>
+
+{% endblock %}
